@@ -1,2 +1,0 @@
-ALTER TABLE Transacao alter COLUMN ID BIGINT;
-ALTER TABLE Transacao alter COLUMN valor BIGINT;

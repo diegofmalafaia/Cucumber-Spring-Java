@@ -35,42 +35,20 @@ public class CieloStarStep {
     //@Autowired
     //private WebDriver driver;
 
-    @Dado("^que esteja na pagina principal$")
-    public void queEuEstejaNaPaginaPrincipalDoSistema() { }
-
-    @Dado("^que o funcionario não possua debitos$")
-    public void queOFuncionarioNãoPossuaDebitos(){ }
-
-    @Quando("^eu acesso a pagina de listagem de usuario$")
-    public void euAcessoAPaginaDeUsuario() throws Throwable{
-//        page.clicarEmMarco();
-        Thread.sleep(300);
+    @Dado("^que eu saiba o saldo de um cliente$")
+    public void queEuSaibaOSaldoDeUmCliente() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        Thread.sleep(500);
     }
 
-    @Então("^verifico que o \"([^\"]*)\" e o (\\d+) estão presentes$")
-    public void verificoQueOEOEstãoPresentes(String nome, Double valor) throws Throwable {
-        Thread.sleep(300);
-
-//        Thread.sleep(300);
-//
-//        page.assertThat()
-//            .userFound(nome);
-//
-//        page.assertThat()
-//            .valueFound(valor);
-//
-//        //Utils.captureScreenshot(driver, "Pagina home");
+    @Quando("^eu incluo uma venda para este cliente$")
+    public void euIncluoUmaVendaParaEsteCliente() throws Throwable {
+        Thread.sleep(500);
     }
 
-    @Então("^eu verifico que este funcionario não está sendo exibido\\.$")
-    public void euVerificoQueEsteFuncionarioNãoEstáSendoExibido() throws Exception{
-        Thread.sleep(300);
-//        page.assertThat()
-//            .userNotFound("Francisco");
-
-        //Utils.captureScreenshot(driver, "Pagina home");
+    @Então("^eu verifico que o saldo deste cliente foi acrescido do valor da venda$")
+    public void euVerificoQueOSaldoDesteClienteFoiAcrescidoDoValorDaVenda() throws Throwable {
+        Thread.sleep(500);
     }
 
-    @Test
-    public void test(){}
 }
