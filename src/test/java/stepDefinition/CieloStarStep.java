@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import br.com.concrete.cielostar.CsbatchApplication;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import config.Config;
 import cucumber.api.java.pt.Dado;
@@ -38,6 +39,7 @@ public class CieloStarStep {
     @Dado("^que eu saiba o saldo de um cliente$")
     public void queEuSaibaOSaldoDeUmCliente() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
+//        CsbatchApplication.main(null);
         Thread.sleep(500);
     }
 
