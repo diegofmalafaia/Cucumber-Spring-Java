@@ -26,7 +26,6 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @SpringBootTest(webEnvironment = DEFINED_PORT)
 @ContextConfiguration(classes = Config.class)
 @DatabaseSetup("datasets/CieloStarStep.xml")
-@Transactional
 @SeleniumTestCase(url = "http://www.google.com",
         pageObject = CieloStarPage.class)
 public class CieloStarStep {
@@ -39,13 +38,14 @@ public class CieloStarStep {
     @Dado("^que eu saiba o saldo de um cliente$")
     public void queEuSaibaOSaldoDeUmCliente() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-//        CsbatchApplication.main(null);
         Thread.sleep(500);
     }
 
     @Quando("^eu incluo uma venda para este cliente$")
     public void euIncluoUmaVendaParaEsteCliente() throws Throwable {
-        Thread.sleep(500);
+            CsbatchApplication.main(null);
+            Thread.sleep(10000);
+
     }
 
     @Então("^eu verifico que o saldo deste cliente foi acrescido do valor da venda$")
